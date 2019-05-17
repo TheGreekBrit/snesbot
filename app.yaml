@@ -1,4 +1,5 @@
 runtime: nodejs10
+service: snesbot
 manual_scaling:
         instances: 1
 env_variables:
