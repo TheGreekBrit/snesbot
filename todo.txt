@@ -1,0 +1,6 @@
+
+popbot TODO
+-----------
+!pop about		// github link
+
+peristent connection

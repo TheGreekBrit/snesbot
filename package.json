@@ -1,0 +1,23 @@
+{
+  "name": "popbot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "@google-cloud/debug-agent": "^3.1.0",
+    "@google-cloud/pubsub": "^0.28.1",
+    "@google-cloud/translate": "^2.1.4",
+    "body-parser": "^1.18.3",
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "forever": "^0.15.3",
+    "parse-duration": "^0.1.1",
+    "pm2": "^3.4.0",
+    "promise": "^8.0.3",
+    "request": "^2.88.0"
+  },
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Alexander Houston",
+  "license": ""
+}
