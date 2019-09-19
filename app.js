@@ -1,4 +1,4 @@
-const DEBUG = 1; if (DEBUG) console.log('DEBUG ENABLED');
+const DEBUG = 2; if (DEBUG) console.log('DEBUG ENABLED');
 
 const Config = require('./conf/bot.json');
 
@@ -152,10 +152,10 @@ function messageHandler(message) {
 		input = message.content.split(' '),         // space-delimited array of message text
 		summonPrefix = input.shift().toLowerCase(); //content[0] - summon prefix (e.g. !pop)
 
-	console.log('summoned?', (summonPrefix.toLowerCase() === SUMMON_COMMAND) && !author.bot);
+	console.log('summoned?', (summonPrefix === SUMMON_COMMAND) && !author.bot);
 
 	// only run when summoned by a user
-	if ((summonPrefix.toLowerCase() !== SUMMON_COMMAND) || author.bot)
+	if ((summonPrefix !== SUMMON_COMMAND) || author.bot)
 		return;
 
 	if (!input) return;     //return if no command given
@@ -163,7 +163,7 @@ function messageHandler(message) {
 	commandName = input.shift().toLowerCase();  //content[1] - command (e.g. ping)
 	commandArgs = input;                        //content[2:] - args after command
 
-	console.log('summoned?', (summonPrefix.toLowerCase() === SUMMON_COMMAND) && !author.bot);
+	//console.log('summoned?', (summonPrefix.toLowerCase() === SUMMON_COMMAND) && !author.bot);
 
 	// only run when summoned by a user
 	if ((summonPrefix.toLowerCase() !== SUMMON_COMMAND) || author.bot)
