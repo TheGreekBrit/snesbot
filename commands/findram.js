@@ -1,5 +1,6 @@
+const _ = require('lodash)');
 const https = require('https');
-const smwram = require('../smwmap.json');
+const SMW_RAM = require('../var/SMW/RAM.json');
 
 module.exports = {
         name: 'findram',
@@ -9,7 +10,7 @@ module.exports = {
         helpDoc: 'placeholder',
         execute(message, args) {
 			//return message.reply('the ping pongs at midnight');
-			smwram.forEach(address => {
+			SMW_RAM.forEach(address => {
 				//todo check address.address for a match
 				[...new Set(address.description.split(' '))].forEach(word => {
 					//todo check for multi-word search terms (ex: 'map16 vram')
@@ -18,9 +19,9 @@ module.exports = {
 						return message.reply(address.address, address.size, address.size === 1?'byte':'bytes', '\n', address.description, '\n');
 					}
 				});
-			})
+			});
 		}
-}
+};
 
 
 
