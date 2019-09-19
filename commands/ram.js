@@ -28,16 +28,5 @@ module.exports = {
 		} else {
 			return message.reply(`Address: ${found.address}\nSize: ${found.size}Type: ${found.type}\nDescription: ${found.description}`);
 		}
-
-		let addressEntry = SMW_RAM[address];
-			//todo check address.address for a match
-			[...new Set(address.description.split(' '))].forEach(word => {
-				//todo check for multi-word search terms (ex: 'map16 vram')
-				if (word.toLowerCase() === args[0].toLowerCase()) {
-					//todo logic when match is found
-					return message.reply(address.address, address.size, address.size === 1?'byte':'bytes', '\n', address.description, '\n');
-				}
-			});
-		});
 	}
 };
