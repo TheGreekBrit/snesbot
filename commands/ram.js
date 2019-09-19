@@ -1,4 +1,4 @@
-const _ = require('lodash)');
+const _ = require('lodash');
 const https = require('https');
 const SMW_RAM = require('../var/SMW/RAM.json');
 
@@ -29,4 +29,6 @@ module.exports = {
 			return message.reply(`Address: ${found.address}\nSize: ${found.size}Type: ${found.type}\nDescription: ${found.description}`);
 		}
 	}
+
+
 };

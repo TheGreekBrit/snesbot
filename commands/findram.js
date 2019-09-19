@@ -1,4 +1,4 @@
-const _ = require('lodash)');
+const _ = require('lodash');
 const fs = require('fs');
 const https = require('https');
 const Promise = require('promise');
